@@ -15,6 +15,7 @@ public class BrandService {
     BrandRepo brandRepo;
 
     //get all brands
+    //endpoint: /brands
     public List<Brand> getAllBrands(){
         List<Brand> brands = new ArrayList<>();
         brandRepo.findAll().forEach(brands::add);
@@ -22,27 +23,30 @@ public class BrandService {
     }
 
     //get brand by id
+    //endpoint: /brands/{brandId}
     public Optional<Brand> getBrandById(Long brandId){
         return brandRepo.findById(brandId);
     }
 
-    //get brand by name
-    public Optional<Brand> getBrandByName(String brandName){
-        return brandRepo.findByName(brandName);
-    }
-
     //add a brand
-    public Brand addBrand(Brand brand){
-        return brandRepo.save(brand);
+    //endpoint: /brands
+    public void addBrand(Brand brand){
+        brandRepo.save(brand);
     }
 
     //update a brand by id
-    public Brand updateBrandById(Long brandId, Brand brand){
-        brand.setId(brandId);
-        return brandRepo.save(brand);
+    //endpoint: /brands/{brandId}
+    public void updateBrandById(Long brandId, Brand newBrand){
+        for(Brand brand: brandRepo.findAll()){
+            if(brand.getId().equals(brandId)){
+                newBrand.setId(brandId);
+                brandRepo.save(newBrand);
+            }
+        }
     }
 
     //delete a brand by id
+    //endpoint: /brands/{brandId}
     public void deleteBrandById(Long brandId){
         brandRepo.deleteById(brandId);
     }

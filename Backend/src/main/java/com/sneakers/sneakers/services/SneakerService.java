@@ -84,6 +84,7 @@ public class SneakerService {
     public void updateSneakerById(Long sneakerId, Sneaker sneaker){
         for (Sneaker sneak: sneakerRepo.findAll()){
             if(sneak.getId().equals(sneakerId)){
+                sneaker.setId(sneakerId);
                 sneakerRepo.save(sneaker);
             }
         }
