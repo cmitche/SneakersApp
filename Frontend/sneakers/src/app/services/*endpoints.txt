@@ -1,0 +1,29 @@
+*** SNEAKERS ***
+get all sneakers - sneakers
+
+get sneaker by id - sneakers/{sneakerId}
+
+get sneakers by brand id - sneakers/brands/{brandId}
+
+get sneakers by model - sneakers/brands/models/{model}
+
+get sneakers by year - sneakers/brands/years/{year}
+
+add a sneaker by brand id - sneakers/{brandId}
+
+update a sneaker by id - sneakers/{sneakerId}
+
+delete a sneaker by id - sneakers/{sneakerId}
+
+
+*** Brands ***
+get all brands - brands
+
+get brand by brand id - brands/{brandId}
+
+add a brand - brands
+
+update a brand - brands/{brandId}
+
+delete a brand - brands/{brandId}
+
