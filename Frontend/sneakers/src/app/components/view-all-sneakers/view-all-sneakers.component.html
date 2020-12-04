@@ -1,2 +1,26 @@
-<img src="{{sneakers[0].image}}" alt="Sneaker Image">
-<p>{{sneakers[0].colorway}}</p>
+<div class="container">
+    <h2>Sneaker Inventory</h2>
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Model</th>
+                <th>Colorway</th>
+                <th>Year</th>
+                <th>Price</th>
+            <tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let sneaker of sneakers" [routerLink]="['/sneakers/', sneaker.id]">
+                <td><img src="{{sneaker.image}}" alt="{{sneaker.brand.name}} {{sneaker.model}} {{sneaker.colorway}}"></td>
+                <td>{{sneaker.model}}</td>
+                <td>{{sneaker.colorway}}</td>
+                <td>{{sneaker.year}}</td>
+                <td>{{sneaker.price | currency: 'USD'}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- <img src="{{sneakers[0].colorway}}" alt="Sneaker Image"> -->
+
+
