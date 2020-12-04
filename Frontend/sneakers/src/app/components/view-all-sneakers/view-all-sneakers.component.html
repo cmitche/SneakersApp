@@ -4,6 +4,7 @@
         <thead>
             <tr>
                 <th>Image</th>
+                <th>Brand</th>
                 <th>Model</th>
                 <th>Colorway</th>
                 <th>Year</th>
@@ -13,6 +14,7 @@
         <tbody>
             <tr *ngFor="let sneaker of sneakers" [routerLink]="['/sneakers/', sneaker.id]">
                 <td><img src="{{sneaker.image}}" alt="{{sneaker.brand.name}} {{sneaker.model}} {{sneaker.colorway}}"></td>
+                <td>{{sneaker.brand.name}}</td>
                 <td>{{sneaker.model}}</td>
                 <td>{{sneaker.colorway}}</td>
                 <td>{{sneaker.year}}</td>
