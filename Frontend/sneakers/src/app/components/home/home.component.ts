@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Brand } from 'src/app/models/brand';
 import { BrandServiceService } from 'src/app/services/brand-service.service';
 
@@ -11,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   brands: Brand[];
 
-  constructor(private brandService: BrandServiceService) { }
+  constructor(private brandService: BrandServiceService, private router: Router) { }
 
   ngOnInit(): void {
     this.getAllBrands();
@@ -24,5 +25,13 @@ export class HomeComponent implements OnInit {
         console.log(response);
       }
     )
+  }
+
+  goToBrands(){
+    this.router.navigate([`brands`]);
+  }
+
+  goToAllSneakers(){
+    this.router.navigate([`sneakers`]);
   }
 }

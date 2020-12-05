@@ -9,6 +9,7 @@ import { ViewSneakerComponent } from './components/view-sneaker/view-sneaker.com
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { HomeComponent } from './components/home/home.component';
 import { ViewAllBrandsComponent } from './components/view-all-brands/view-all-brands.component';
+import { ViewBrandComponent } from './components/view-brand/view-brand.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ViewAllBrandsComponent } from './components/view-all-brands/view-all-br
     ViewSneakerComponent,
     PageNotFoundComponent,
     HomeComponent,
-    ViewAllBrandsComponent
+    ViewAllBrandsComponent,
+    ViewBrandComponent
   ],
   imports: [
     BrowserModule,
