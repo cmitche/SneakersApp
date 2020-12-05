@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row" *ngFor="let brand of brands">
+        <div class="col" *ngIf="brand.name == 'Nike'">
+            <img src="{{brand.logo}}" alt="Nike">
+        </div>
+        <div class="col">
+            <p>column 2</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p>column 1</p>
+        </div>
+        <div class="col">
+            <p>column 2</p>
+        </div>
+    </div>
+</div>

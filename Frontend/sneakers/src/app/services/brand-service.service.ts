@@ -13,11 +13,11 @@ export class BrandServiceService {
   constructor(private http: HttpClient) { }
 
   getAllBrands(): Observable<any>{
-    return this.http.get<any>(this.url);
+    return this.http.get<any>(this.url + `brands`);
   }
 
   getBrandByBrandId(brandId: number): Observable<any>{
-    return this.http.get<any>(this.url + `brnads/${brandId}`);
+    return this.http.get<any>(this.url + `brands/${brandId}`);
   }
 
   addBrand(brand: Brand):Observable<any>{
