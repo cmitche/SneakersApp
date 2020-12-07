@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Brand } from 'src/app/models/brand';
+import { BrandServiceService } from 'src/app/services/brand-service.service';
 
 @Component({
   selector: 'app-view-all-brands',
@@ -7,9 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewAllBrandsComponent implements OnInit {
 
-  constructor() { }
+  brands: Brand[];
+
+  constructor(private brandService: BrandServiceService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.getAllBrands();
+  }
+
+  getAllBrands(){
+    this.brandService.getAllBrands().subscribe(
+      response =>{
+        this.brands = response;
+        console.log(response)
+      }
+    );
+  }
+
+  goToBrand(){
+    const id = this.activatedRoute.snapshot.params[`brandId`];
+    this.brandService.getBrandByBrandId(id);
   }
 
 }

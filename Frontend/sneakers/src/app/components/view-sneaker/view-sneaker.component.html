@@ -1,1 +1,21 @@
-<p>view-sneaker works!</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <h3 id="SneakerTitle">{{sneaker.brand.name}} - {{sneaker.model}} "{{sneaker.colorway}}"</h3>
+        </div>
+    </div>
+    <!-- <img src="{{sneaker.image}}" alt=""> -->
+    <div class="card" style="width: 50%;">
+        <img class="card-img-top" src="{{sneaker.image}}" alt="Sneaker Image">
+        <div class="card-body">
+            <h4><b>Brand:</b> {{sneaker.brand.name}}</h4>
+            <h4><b>Model:</b> {{sneaker.model}}</h4>
+            <h4><b>Colorway:</b> {{sneaker.colorway}}</h4>
+            <h4><b>Year:</b> {{sneaker.year}}</h4>
+            <h4><b>Price:</b> {{sneaker.price | currency: 'USD'}}</h4>
+        </div>
+      </div>
+</div>
+
+
+

@@ -1,1 +1,24 @@
-<p>view-brand works!</p>
+<div class="container">
+    <h2>{{sneakers[0].brand.name}} Sneakers</h2>
+    <form action="Submit">
+        
+    </form>
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Brand</th>
+                <th>Model</th>
+                <th>Price</th>
+            <tr>
+        </thead>
+        <tbody  *ngFor="let sneaker of sneakers">
+            <tr [routerLink]="['/sneakers/', sneaker.id]">
+                <td><img src="{{sneaker.image}}" alt="{{sneaker.brand.name}} {{sneaker.model}} {{sneaker.colorway}}"></td>
+                <td>{{sneaker.brand.name}}</td>
+                <td>{{sneaker.model}}</td>
+                <td>{{sneaker.price | currency: 'USD'}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

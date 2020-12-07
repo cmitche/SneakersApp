@@ -9,8 +9,6 @@
                 <th>Image</th>
                 <th>Brand</th>
                 <th>Model</th>
-                <th>Colorway</th>
-                <th>Year</th>
                 <th>Price</th>
             <tr>
         </thead>
@@ -19,8 +17,6 @@
                 <td><img src="{{sneaker.image}}" alt="{{sneaker.brand.name}} {{sneaker.model}} {{sneaker.colorway}}"></td>
                 <td>{{sneaker.brand.name}}</td>
                 <td>{{sneaker.model}}</td>
-                <td>{{sneaker.colorway}}</td>
-                <td>{{sneaker.year}}</td>
                 <td>{{sneaker.price | currency: 'USD'}}</td>
             </tr>
         </tbody>

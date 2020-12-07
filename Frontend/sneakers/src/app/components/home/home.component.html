@@ -1,21 +1,20 @@
 <div class="container">
-   <div class="row" id="BrandRow">
-       <div class="col">
-           <h3>This Week's Hottest Brands</h3>
-           <button (click)="goToBrands()" class="btn btn-secondary">Shop by Brand</button>
-       </div>
-       <div class="col">
-        <a routerLink="/brands" routerLinkActive="active"><img src="https://sneakerswarm.net/wp-content/uploads/2017/07/post-696x436-brands.jpg" alt="brands"></a> 
-       </div>
-   </div>
-
    <div class="row" id="AllSneakers">
-       <div class="col">
-        <a routerLink="/sneakers" routerLinkActive="active"><img src="https://www.kicksonfire.com/wp-content/uploads/2015/05/4121297-e1431362123811.jpg" alt="brands"></a> 
-       </div>
-       <div class="col">
+       <div class="col-6">
         <h3>All Sneakers</h3>
         <button (click)="goToAllSneakers()" class="btn btn-secondary">View All Sneakers</button>
        </div>
+       <div class="col-6">
+        <a routerLink="/sneakers" routerLinkActive="active"><img src="https://www.kicksonfire.com/wp-content/uploads/2015/05/4121297-e1431362123811.jpg" alt="brands"></a> 
+       </div>
    </div>
+   <div class="row" id="BrandRow">
+    <div class="col-6">
+        <h3>This Week's Hottest Brands</h3>
+        <button (click)="goToBrands()" class="btn btn-secondary">Shop by Brand</button>
+    </div>
+    <div class="col-6">
+     <a routerLink="/brands" routerLinkActive="active"><img src="https://sneakerswarm.net/wp-content/uploads/2017/07/post-696x436-brands.jpg" alt="brands"></a> 
+    </div>
+</div>
 </div>
