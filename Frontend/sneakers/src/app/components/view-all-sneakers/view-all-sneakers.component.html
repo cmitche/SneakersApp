@@ -1,9 +1,23 @@
 <div class="container">
     <h2>Sneaker Inventory</h2>
-    <form action="Submit">
-        
+    <form action="Submit">   
     </form>
-    <table class="table table-striped table-bordered table-hover">
+
+            <div class="grid-container">
+                <div class="grid-item" *ngFor="let sneaker of sneakers">
+                    <div class="card" [routerLink]="['/sneakers/', sneaker.id]" style="width: 18rem;">
+                        <img class="card-img-top" [src]="sneaker.image" alt="Sneaker Image">
+                        <div class="card-body">
+                        <h5 class="card-title">{{sneaker.model}}</h5>
+                        <p class="card-text">{{sneaker.price | currency: 'USD'}}</p>
+                        <p class="card-text">{{sneaker.colorway}}</p>
+                        <button type="button" class="btn btn-outline-light">More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+    <!-- <table class="table table-striped table-bordered table-hover">
         <thead>
             <tr>
                 <th>Image</th>
@@ -20,7 +34,7 @@
                 <td>{{sneaker.price | currency: 'USD'}}</td>
             </tr>
         </tbody>
-    </table>
+    </table> -->
 </div>
 <!-- <img src="{{sneakers[0].colorway}}" alt="Sneaker Image"> -->
 

@@ -12,6 +12,8 @@ export class ViewSneakerComponent implements OnInit {
 
   sneaker: Sneaker;
 
+  starRating = 0;
+
   constructor(private sneakerService: SneakerServiceService, private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {

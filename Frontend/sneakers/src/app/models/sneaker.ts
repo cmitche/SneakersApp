@@ -8,5 +8,6 @@ export class Sneaker{
     colorway: string;
     price: number;
     image: string;
-
+    nickname: string;
+    outfit: string;
 }

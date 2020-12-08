@@ -5,16 +5,25 @@
         </div>
     </div>
     <!-- <img src="{{sneaker.image}}" alt=""> -->
-    <div class="card" style="width: 50%;">
-        <img class="card-img-top" src="{{sneaker.image}}" alt="Sneaker Image">
-        <div class="card-body">
-            <h4><b>Brand:</b> {{sneaker.brand.name}}</h4>
-            <h4><b>Model:</b> {{sneaker.model}}</h4>
-            <h4><b>Colorway:</b> {{sneaker.colorway}}</h4>
-            <h4><b>Year:</b> {{sneaker.year}}</h4>
-            <h4><b>Price:</b> {{sneaker.price | currency: 'USD'}}</h4>
-        </div>
-      </div>
+            <div class="card" style="width: 40rem;">
+                <img class="card-img-top" src="{{sneaker.image}}" alt="Sneaker Image">
+                <div class="card-body">
+                    <h4><b>Brand:</b> {{sneaker.brand.name}}</h4>
+                    <h4><b>Model:</b> {{sneaker.model}}</h4>
+                    <h4><b>Colorway:</b> {{sneaker.colorway}}</h4>
+                    <h4><b>Year:</b> {{sneaker.year}}</h4>
+                    <h4><b>Price:</b> {{sneaker.price | currency: 'USD'}}</h4>
+                    <h4><b>Nickname:</b> {{sneaker.nickname}}</h4>
+                    <ngb-rating [max]="5" [(rate)]="starRating" [readonly]="false"></ngb-rating>
+                </div>
+            </div>
+
+            <div id="outifitContainer">
+                <h4><b>Outfit Idea:</b></h4>
+                <img id="outfit" src="{{sneaker.outfit}}" alt="Outfit Idea">
+            </div>
+                
+
 </div>
 
 

@@ -15,6 +15,24 @@ public class Sneaker {
     private String colorway;
     private Double price;
     private String image;
+    private String nickname;
+    private String outfit;
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public String getOutfit() {
+        return outfit;
+    }
+
+    public void setOutfit(String outfit) {
+        this.outfit = outfit;
+    }
 
     public Sneaker() {
     }

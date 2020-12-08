@@ -1,3 +1,13 @@
-img{
-    height: 75px;
-}
+/* img{
+} */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 0px;
+
+  }
+  .grid-item {
+    padding-bottom: 7px;
+    text-align: center;
+  }
