@@ -1,0 +1,24 @@
+#wrapper{
+    background-color: gray;
+}
+
+#wrapper .col{
+    padding: 20px;
+    text-align: center;
+}
+
+#wrapper h4{
+    color: white;
+}
+
+#wrapper .row{
+    background-color: black;
+}
+
+#Nike{
+    background-color: black;
+}
+
+#Adidas{
+    background-color: black;
+}

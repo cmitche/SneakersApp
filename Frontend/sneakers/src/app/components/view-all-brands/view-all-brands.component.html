@@ -1,1 +1,25 @@
-<p>view-all-brands works!</p>
+<div class="container">
+    <h2>Featured Brands</h2>
+    <div class="container" id="wrapper">
+        <div class="row">
+            <div class="col" id="Brand1">
+                <h4>{{brands[0].name}}</h4>
+                <button class="btn btn-dark" [routerLink]="['/brands/', brands[0].id]">Shop {{brands[0].name}}</button>
+            </div>
+            <div class="col" id="Brand2">
+                <h4>{{brands[1].name}}</h4>
+                <button class="btn btn-dark" [routerLink]="['/brands/', brands[1].id]">Shop {{brands[1].name}}</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" id="Brand3">
+                <h4>{{brands[2].name}}</h4>
+                <button class="btn btn-dark" [routerLink]="['/brands/', brands[2].id]">Shop {{brands[2].name}}</button>
+            </div>
+            <div class="col" id="Brand4">
+                <h4>{{brands[3].name}}</h4>
+                <button class="btn btn-dark" [routerLink]="['/brands/', brands[3].id]">Shop {{brands[3].name}}</button>
+            </div>
+        </div>
+    </div>
+</div>
